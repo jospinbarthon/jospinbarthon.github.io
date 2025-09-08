@@ -344,110 +344,7 @@
             text-decoration: none;
             font-weight: bold;
         }
-
-         /* MODAL POUR ARTICLES */
-         .articles-section {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
         
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 40px;
-            color: #2c3e50;
-            position: relative;
-        }
-        
-        .section-title:after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: #3498db;
-            margin: 15px auto 0;
-            border-radius: 2px;
-        }
-        
-        .articles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 25px;
-        }
-        
-        .article-card {
-            background: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .article-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-        }
-        
-        .article-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-        }
-        
-        .article-content {
-            padding: 20px;
-        }
-        
-        .article-title {
-            font-size: 1.4rem;
-            margin-bottom: 12px;
-            color: #2c3e50;
-        }
-        
-        .article-summary {
-            color: #555;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-        
-        .article-meta {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-            font-size: 0.9rem;
-            color: #777;
-        }
-        
-        .read-more {
-            display: inline-block;
-            margin-top: 1rem;
-            color: #3498db;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 8px 16px;
-            border: 2px solid #3498db;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-        
-        .read-more:hover {
-            background-color: #3498db;
-            color: white;
-        }
-        
-        @media (max-width: 768px) {
-            .articles-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .section-title {
-                font-size: 1.8rem;
-            }
-        }
-
-
         /* SECTION À PROPOS */
         .about-section {
             padding: 80px 0;
@@ -967,11 +864,11 @@
             <h2 class="section-title">Articles & Réflexions</h2>
             <div class="blog-grid">
                 <!-- Article 1 -->
-                 <div class="blog-card" onclick="openArticle('article1')">
+                 <div class="blog-card" onclick="window.location.href='article1.html'">
                         <p class="blog-date">Janvier 2025</p>
                         <h3 class="blog-title">L'amour et ses substituts</h3>
                         <p class="blog-excerpt">Sortir de l'illusion et vivre le véritable amour. Une réflexion profonde sur les vraies valeurs de l'amour selon la perspective biblique.</p>
-                       <a href="javascript:void(0)" class="read-more">Lire la suite →</a>
+                       <a href="article1.html" class="read-more">Lire la suite →</a>
                     </div>
                 </div>
                 <!-- Article 2 -->
