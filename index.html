@@ -17,10 +17,10 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Calisto MT', serif;
             line-height: 1.6;
-            color: #333;
-            background: #fff;
+            color: #0a0a0e;
+            background: #fff; 
         }
 
         .container {
@@ -31,9 +31,9 @@
 
         /* COULEURS THÈME */
         :root {
-            --primary-color: #2c5530;
-            --secondary-color: #d4af37;
-            --accent-color: #8b4513;
+            --primary-color: #003c8a;
+            --secondary-color: #15b4f3;
+            --accent-color: #090172;
             --text-dark: #1a1a1a;
             --text-light: #666;
             --bg-light: #f8f8f8;
@@ -735,7 +735,7 @@
     <!-- HEADER -->
     <header>
         <nav class="container">
-            <a href="#" class="logo">Jospin MUTULA</a>
+            <a href="#" class="logo"><img src="jospin-portrait.jpg[1].png" alt=""></a>
             <div class="hamburger" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
@@ -765,7 +765,7 @@
     <!-- SECTION VIDÉOS -->
     <section class="videos-section" id="videos">
         <div class="container">
-            <h2 class="section-title">Moments d'Enseignement</h2>
+            <h2 class="section-title">Série Perdu Mais Retrouvé</h2>
             <div class="videos-grid">
                 <!-- Vidéo 1 -->
                 <div class="video-card">
@@ -773,7 +773,7 @@
                         <iframe src="https://www.youtube.com/embed/2MgdD586NrQ" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
-                        <h3 class="video-title">Enseignement Spirituel</h3>
+                        <h3 class="video-title">Le Fils Prodigue E03 </h3>
                     </div>
                 </div>
                 <!-- Vidéo 2 -->
@@ -782,7 +782,7 @@
                         <iframe src="https://www.youtube.com/embed/jI5b5MvAlN0" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
-                        <h3 class="video-title">Message d'Inspiration</h3>
+                        <h3 class="video-title">La Femme Samaritaine E02</h3>
                     </div>
                 </div>
                 <!-- Vidéo 3 -->
@@ -791,7 +791,7 @@
                         <iframe src="https://www.youtube.com/embed/RgE3wryc-jo" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="video-info">
-                        <h3 class="video-title">Conférence</h3>
+                        <h3 class="video-title">La Femme aAdultère</h3>
                     </div>
                 </div>
                 <!-- Vidéo 4 -->
@@ -815,10 +815,10 @@
                 <!-- Livre 1 -->
                 <div class="book-card">
                     <div class="book-cover">
-                        ET ILS NE FERONT<br>PLUS QU'UN
+                        <livre-et-ils-ne-feront class="jpg" 2=""></livre-et-ils-ne-feront><br>PLUS QU'UN
                     </div>
                     <div class="book-info">
-                        <h3 class="book-title">Et ils ne feront plus qu'un</h3>
+                        <img src="livre-et-ils-ne-feront.jpg[2].jpg" alt="Et ils ne feront plus qu'un" style="width: 100%; height: 100%; object-fit: cover;">
                         <p class="book-description">Perception Biblique de la Sexualité. Un livre qui redécouvre la pensée biblique authentique sur la sexualité comme don de Dieu.</p>
                         <p class="book-price">10 USD</p>
                         <span class="book-status">Disponible</span>
@@ -827,11 +827,11 @@
                 <!-- Livre 2 -->
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="livre-comment-fut-elle.jpg" alt="Comment fut-elle enceintée" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="livre-comment-fut-elle.jpg[1].png" alt="Comment fut-elle enceintée" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="book-info">
                         <h3 class="book-title">Comment fut-elle enceintée</h3>
-                        <p class="book-description">Comprendre et prévenir la maternité précoce. Un guide essentiel pour les jeunes.</p>
+                        <p class="book-description">Comprendre et prévenir la maternité précoce. Apprendre des huit récits qui changeront votre manière de traiter et voir une mère célibatiare.</p>
                         <p class="book-price">À venir</p>
                         <span class="book-status coming-soon">Bientôt disponible</span>
                     </div>
@@ -842,8 +842,8 @@
                         Nouveau Livre<br>À Paraître
                     </div>
                     <div class="book-info">
-                        <h3 class="book-title">Prochain Ouvrage</h3>
-                        <p class="book-description">Un nouveau livre en préparation sur la vie spirituelle des jeunes.</p>
+                        <h3 class="book-title">LES ANGES EXISTENT </h3>
+                        <p class="book-description">Redécouvrir le ministère angélique dès ses origines jusqu'à nos jours.</p>
                         <p class="book-price">À définir</p>
                         <span class="book-status coming-soon">En préparation</span>
                     </div>
@@ -861,27 +861,26 @@
             <h2 class="section-title">Articles & Réflexions</h2>
             <div class="blog-grid">
                 <!-- Article 1 -->
-                <div class="blog-card">
-                    <div class="blog-content">
+                 <div class="blog-card" onclick="openArticle('article1')">
                         <p class="blog-date">Janvier 2025</p>
                         <h3 class="blog-title">L'amour et ses substituts</h3>
                         <p class="blog-excerpt">Sortir de l'illusion et vivre le véritable amour. Une réflexion profonde sur les vraies valeurs de l'amour selon la perspective biblique.</p>
-                        <a href="#" class="read-more">Lire la suite →</a>
+                       <a href="javascript:void(0)" class="read-more">Lire la suite →</a>
                     </div>
                 </div>
                 <!-- Article 2 -->
-                <div class="blog-card">
+                <div class="blog-card" onclick="openArticle('article2')">
                     <div class="blog-content">
-                        <p class="blog-date">Décembre 2024</p>
+                        <p class="blog-date">Avril 2025</p>
                         <h3 class="blog-title">Aimer sans se perdre</h3>
                         <p class="blog-excerpt">Comment maintenir son identité tout en s'engageant dans une relation amoureuse saine et équilibrée.</p>
-                        <a href="#" class="read-more">Lire la suite →</a>
+                        <a href="javascript:void(0)" class="read-more">Lire la suite →</a>
                     </div>
                 </div>
                 <!-- Article 3 -->
-                <div class="blog-card">
+                <div class="blog-card" onclick="openArticle('article3')">
                     <div class="blog-content">
-                        <p class="blog-date">Novembre 2024</p>
+                        <p class="blog-date">Août 2025</p>
                         <h3 class="blog-title">Une sanctification authentique</h3>
                         <p class="blog-excerpt">Explorer le chemin vers une vie spirituelle authentique et transformatrice dans le monde moderne.</p>
                         <a href="#" class="read-more">Lire la suite →</a>
@@ -890,12 +889,260 @@
             </div>
         </div>
     </section>
-
+<!-- MODAL POUR ARTICLES -->
+<div class="article-modal" id="articleModal">
+    <div class="article-content">
+        <span class="close-article" onclick="closeArticle()">&times;</span>
+        <h2 class="article-full-title" id="articleTitle">Titre de l'article</h2>
+        <div class="article-meta" id="articleMeta">Date</div>
+        <div class="article-body" id="articleBody">
+            Contenu de l'article...
+        </div>
+    </div>
+</div>
     <!-- SECTION À PROPOS -->
-    <section class="about-section" id="apropos">
+<section class="about-section" id="apropos">
+    <div class="container">
+        <h2 class="section-title">À Propos</h2>
+        <div class="about-content">
+            <div class="author-image">
+                <img src="jospin-portrait.jpg" alt="Jospin MUTULA Barthon" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'image-placeholder\'>Photo<br>Jospin MUTULA</div>'">
+            </div>
+            <div class="about-text">
+                <h3>Jospin MUTULA Barthon</h3>
+                <p>Théologien avec une licence en exégèse biblique de l'Université Évangélique en Afrique, je suis écrivain et auteur de plusieurs ouvrages publiés et à paraître. Je sers également comme Directeur d'édition chez Phoenix Publication.</p>
+                <p>Passionné par le Christ et dévoué à donner un sens à la vie des jeunes, mon ministère se concentre sur l'enseignement biblique, particulièrement dans les domaines de la sexualité, des relations amoureuses et de la sanctification selon une perspective chrétienne authentique.</p>
+                <p><strong>Ma mission :</strong> Guider les jeunes vers l'essentiel - leur relation à Dieu, à eux-mêmes et à l'amour véritable.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/JospinMutulaBarthon" target="_blank">Facebook</a>
+                    <a href="https://www.tiktok.com/@jospinbarth" target="_blank">TikTok</a>
+                    <a href="mailto:mutulamudekere@gmail.com">Email</a>
+                    <a href="tel:+243975258617">+243 975 258 617</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- FOOTER -->
+    <footer>
         <div class="container">
-            <h2 class="section-title">À Propos</h2>
-            <div class="about-content">
-                <div class="author-image">
-                    <div style="text-align: center;">
-                        <div style="font-size: 3rem;">📚</div
+            <p>&copy; 2024 Jospin MUTULA Barthon. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL POUR ARTICLES -->
+    <div class="article-modal" id="articleModal">
+        <div class="article-content">
+            <span class="close-article" onclick="closeArticle()">&times;</span>
+            <h2 class="article-full-title" id="articleTitle">Titre</h2>
+            <div class="article-meta" id="articleMeta">Date</div>
+            <div class="article-body" id="articleBody">Contenu</div>
+        </div>
+    </div>
+
+    <!-- SCRIPT JAVASCRIPT -->
+    <script>
+    // Contenu de l'article...
+    const articles = {
+     article1: {
+        title: "L'amour et ses substituts : Distinguer le vrai du faux",
+        date: "Janvier 2025",
+        content: `
+            <h3>Une réalité troublante qui nous concerne tous</h3>
+            <p>Vous l'avez sûrement remarqué : il est facile de tomber amoureux, mais rester amoureux, c'est une autre histoire. Pour beaucoup, les relations les plus longues qu'ils ont eues étaient les premières. Plus on multiplie les ruptures, moins on reste longtemps avec la personne suivante.</p>
+            <p><strong>Qu'en est-il vraiment ?</strong> Nous passons du "tu es le plus beau trésor que j'aie jamais vu" au "tu es la pire chose qui me soit arrivée". Les célibataires sautent d'une relation à l'autre, les mariés d'un divorce à l'autre. À chaque fois, l'amour que l'on croit avoir trouvé varie selon la personne rencontrée.</p>
+            
+            <h3>La parabole du blé et de l'ivraie appliquée à l'amour</h3>
+            <p><strong>Matthieu 13:24-26</strong> nous présente une parabole éclairante : "Le royaume des cieux est semblable à un homme qui a semé une bonne semence dans son champ. Mais pendant que les gens dormaient, son ennemi vint, sema de l'ivraie parmi le blé et s'en alla. Lorsque l'herbe eut poussé et donné du fruit, l'ivraie parut aussi."</p>
+            <p>Ce n'est qu'après que l'herbe eut poussé et donné du fruit qu'on se rendit compte que la semence du bon semeur fut mélangée avec celle de l'ennemi.</p>
+            <p>Il en est de même en amour : le temps permet de découvrir si l'amour que nous donnons ou recevons est véritable ou s'il s'agit d'une copie, d'un substitut presque identique. L'ivraie est une mauvaise herbe qui, tant qu'elle n'a pas manifesté ses fruits, ne peut être différenciée du blé.</p>
+            <p><strong>Des substituts d'amour sont si proches du vrai amour qu'on ne peut les reconnaître qu'au moment de la récolte.</strong></p>
+            
+            <h3>Premier substitut : L'amour désir</h3>
+            <p>L'histoire tragique d'Amnon et Tamar</p>
+            <p>L'Écriture nous raconte dans 2 Samuel 13 l'histoire troublante d'Amnon : "Amnon était si amoureux d'être tourmenté jusqu'à se rendre malade à cause de Tamar, sa sœur... Comme elle lui présentait à manger, il la saisit et lui dit : Viens, couche avec moi, ma sœur... Il lui fit violence, la déshonora et coucha avec elle. Puis Amnon eut pour elle une forte aversion, plus forte que n'avait été son amour."</p>
+            <p>Voilà l'illustration la plus claire d'un passage de l'amour à la haine la plus sévère.</p>
+            <p>Les caractéristiques de l'amour désir</p>
+            
+            <p>L'amour désir se caractérise par :</p>
+            <p>•	Une obsession maladive : "Je ne peux vivre sans toi" devient le leitmotiv</p>
+            <p>•	Une déconnexion du monde extérieur : Les études n'existent plus, la famille, le travail, l'église... juste "nous deux"</p>
+            <p>•	Une baisse de productivité : Faible concentration, responsabilités négligées, dialogues interminables</p>
+            <p>•	Des décisions déraisonnables : Dépenses financières irréfléchies, usage démesuré du temps</p>
+            <p>Un amour qui détruit notre productivité dans plusieurs domaines de notre vie n'est qu'un substitut d'amour. L'amour vrai n'est ni déraisonnable ni inconscient.</p>
+
+            <p>Comment le détecter ?</p>
+            <p><strong>Durant vos conversations</strong> : Si vos discussions tournent surtout autour de l'intimité physique, c'est un signal d'alarme. Même s'il prétendait être fatigué, dès que ce sujet arrive, il a soudain une énergie pour en parler toute la nuit.</p>
+            <p><strong>Les centres d'intérêt</strong> : Cette personne s'active principalement dans des activités qui comportent une excitation sexuelle. Pour elle, l'intimité physique est la preuve ultime d'amour.</p>
+            <p><strong>Les réactions durant les moments particuliers</strong> : Face aux périodes d'excitation hormonale, cherche-t-elle à profiter de votre vulnérabilité ou à vous protéger ? C'est révélateur de ses vraies intentions.</p>
+            
+            <h3>Deuxième substitut : L'amour sensationnel</h3>
+            <p>L'amour sensationnel vient du terme grec "αἴσθησις (aísthēsis)" qui signifie "perception par les sens". Cet amour est lié aux sensations que nous ressentons dans notre corps lorsque nous sommes en présence d'une personne particulière.</p>
+            <p><strong>L'amour sensationnel et le coup de foudre<strong>/</p>
+            <p>Chacun de nous a ses critères : un homme élancé, une femme claire, des qualités de charisme... Lorsque nous rencontrons quelqu'un qui possède ces critères, nos sens envoient un signal : le coup de foudre.</p>
+            <p>Cette sensation est si forte que, dès le premier regard, nous sommes convaincus que cette personne est la bonne. Mais le plus grand danger réside dans le fait que nous sommes séduits par l'apparence physique plutôt que par les qualités intérieures.</p>
+
+            <p><strong>La quête du prince charmant</strong></p>
+            <p>Comme Salomon qui "aima beaucoup de femmes étrangères" (1 Rois 11:1-3), beaucoup cherchent la personne parfaite, celle qui comblerait tous leurs critères. Pourtant, cette personne parfaite n'existe que dans notre imagination.</p>
+            <p>Le problème ? Notre cerveau est attiré par ce que nous n'avons pas plutôt que par ce que nous avons déjà. Nous pouvons quitter quelqu'un qui a 70% de nos critères pour quelqu'un qui en a 65%, mais qui possède les 30% que l'autre n'a pas.</p>
+            <p>Les raisons et l'amour sensationnel</p>
+            <p>Blaise Pascal disait : "L'amour a ses raisons que la raison ignore." Mais l'amour sensationnel peut être qualifié d'amour matérialiste, où l'on accorde plus d'importance à ce que la personne a plutôt qu'à ce qu'elle est.</p>
+            <p>Si je t'aime parce que tu es claire, jeune, mince et populaire, tu seras obligée de conserver ces qualités tout au long de notre relation. Si tu commences à les perdre, mon amour diminuera également.</p>
+
+            <h3>Troisième substitut : L'amour sentimental</h3>
+            <p>L'amour sentimental est le substitut le plus proche du véritable amour. Il se base sur les émotions et les sentiments que nous ressentons pour une personne.</p>
+            <p><strong>La source de la variabilité</strong></p>
+            <p>Les sentiments sont dépendants des actions entreprises par une personne. Si notre partenaire ignore nos messages, cela peut faire baisser notre sentiment d'amour. S'il nous offre des cadeaux, cela peut les renforcer.</p>
+            <p>Le problème ? Il est impossible de maintenir la même adresse émotionnelle sur une longue période. Les émotions varient constamment, toutes les cinq secondes environ.</p>
+            <p>L'hypocrisie dangereuse</p>
+            <p>Rappelez-vous l'histoire de Juliane qui, voyant son prétendant arriver, se débarrassa de sa canne à sucre pour paraître présentable. En présence d'une personne qui nous courtise, nous présentons le meilleur de nous-mêmes.</p>
+            <p>Cette hypocrisie se crée parce que l'amour sentimental est perfectionniste. Pour éveiller des sentiments en l'autre, je dois présenter uniquement ma face positive et cacher mes défauts.</p>         
+            <p><strong>Le réveil brutal</strong></p>
+            <p>Quand arrivent les défis de la vie réelle, nous découvrons la "face B" de notre partenaire. Beaucoup s'exclament : "Elle a beaucoup changé !" Or ce n'est pas le cas. C'est ce qu'elle a toujours été.</p>
+            
+            <h3>Le véritable amour : L'Agapè</h3>
+            <p><strong>Éphésiens 5:25</strong> nous dit : "Maris, aimez vos femmes comme Christ a aimé l'Église." Paul demande aux maris d'aimer avec l'agapè - le véritable amour que Dieu partage avec nous.</p>
+            <p>L'amour est une décision</p>
+            <p>L'amour agapè est une force générée par une décision ferme de répondre aux besoins d'une personne tout au long de sa vie, sans rien attendre en retour.</p>
+            <p><strong>Pourquoi parler de décision ?</strong></p>
+            <p>•	L'impact des décisions : Nous sommes le fruit de nos choix. Ce que vous êtes aujourd'hui résulte de vos décisions d'hier.</p>
+            <p>•	L'omniprésence des choix : Nous devons constamment faire des choix, du lever au coucher.</p>
+            <p>Deutéronome 30:19 nous dit : "Choisis la vie, afin que tu vives." De même, la vie et la mort de l'amour dans une relation sont sous notre pouvoir de choix.</p>
+
+            <h3>Les sentiments et la décision</h3>
+            <p>Les sentiments ne constituent pas la base de l'amour, mais ils l'accompagnent. Les sentiments accompagnent nos choix. Plus nous sommes enracinés dans notre décision d'aimer, plus nous pourrons surmonter nos différences.</p>
+            <p>Le processus d'amour : les trois C</p>
+            <p>L'amour véritable est un fruit qui nécessite un processus pour mûrir. Ce processus se compose de trois C :</p>
+            <p><strong>1. CONNAISSANCE</strong> Apprendre à se connaître sans arrière-pensée d'un potentiel avenir amoureux. La beauté du véritable amour réside dans la surprise. Plus nous nous connaissons, plus nous développons la confiance et la compréhension mutuelle.</p>
+            <p><strong>2. COMPATIBILITÉ</strong> Maintenant que nous nous connaissons, pouvons-nous vivre ensemble ? 2 Corinthiens 6:14-15 nous met en garde contre les unions incompatibles. Il faut vérifier :</p>
+            <p>•	La compatibilité spirituelle : Partagez-vous les mêmes convictions ?</p>
+            <p>•	La compatibilité intellectuelle : Avez-vous la même vision de la vie ?</p>
+            <p><strong>3. COMPLÉMENTARITÉ</strong> La capacité de combler mutuellement nos lacunes. Ecclésiaste 4:10 : "Car, s'ils tombent, l'un relève son compagnon." L'amour vrai est un amour de perfectionnement qui nous rend meilleurs.</p>
+
+            <h3>Conclusion</h3>
+             <p>L'amour véritable se distingue des substituts par sa capacité à :</p>
+             <p>•	Nous faire grandir plutôt que nous diminuer</p>
+             <p>•	Nous rapprocher de Dieu plutôt que nous en éloigner</p>
+             <p>•	Supporter l'épreuve du temps et des difficultés</p>
+             <p>•	Se baser sur la connaissance profonde plutôt que sur l'apparence</p>
+             <p> Ne vous contentez pas de l'ivraie quand Dieu vous destine le bon blé. Apprenez à distinguer le vrai amour de ses contrefaçons pour bâtir des relations durables selon le cœur de Dieu.</p>
+
+            <h3>Jospin Mutula Barthon</h3>
+            <p>Auteur - Ecrivain</p>
+            <p>Contact : +234 975258617</p>
+	        <p>mutulamudekere@gmail.com</p>
+        `
+    },
+    article2: {
+        title: "Aimer sans se perdre",
+        date: "Avril 2025",
+        content: `
+            <h3>Une question qui dérange</h3>
+            <p>J’ai une question qui va peut-être challenger certaines personnes, surtout ceux qui sont déjà en relation : <strong>Qu'est-ce qui peut rester de votre relation si on retire deux choses ?</strong></p>
+            <p>Premièrement, si on retire l'argent. Deuxièmement, si on retire le sexe.</p>
+            <p>Qu'est-ce qui reste de votre relation amoureuse ? Qu'est-ce que vous devenez si on retire ces deux choses ?</p>
+            <p>Cette question peut paraître brutale, mais elle est essentielle. Parce que malheureusement, ce sont les deux caractéristiques les plus courantes des relations amoureuses aujourd'hui, surtout avec la culture que le monde nous impose.</p>
+            <p>Il est difficile de demander à une fille qui est en relation : "Qu'est-ce que tu as de plus à offrir à part ton corps ?" Et il est tout aussi difficile de demander à un homme : "Qu'est-ce que tu as de plus à offrir à part ton argent ?"</p>
+            <p>Si ce sont ces deux choses qui caractérisent votre relation, laissez-moi vous dire une chose : ce n'est pas une relation. Vous êtes dans une sorte de transaction. Cette transaction n'est pas loin d'une relation de concubinage, pire encore, d'une relation de prostitution.</p>
+
+            <h3>L'amour selon Dieu : Une liberté, pas une prison</h3>
+            <p>Quand la Bible nous parle d'amour, elle présente un amour qui exclut la crainte. L'amour parfait bannit la peur (1 Jean 4:18). Si vous aimez vraiment, cet amour parfait vous fera aller de l'avant et non reculer.</p>
+            <p>Par rapport à la Bible, l'amour n'est pas une mauvaise chose. C'est plutôt la manière dont le monde l'utilise qui transforme cet amour en objet de blessures et de déceptions.</p>
+            <p><strong>La Parole de Dieu présente l'amour comme un moyen de guérison, un moyen d'avancement auprès du Seigneur.</strong></p>
+
+            <h3>Les pièges qui nous font perdre en amour</h3>
+            <p>Les relations amoureuses sont comme un couteau, il peut vous servir pour bien tailler vos aliments ou peut se retourner contre vous et vous blesser. Plusieurs ont subi le deuxième effet, l’amour les a plus détruits, ils y ont plus perdu que gagner et parfois c’est à cause de certains pièges qui se placent devant nous. Ces pièges sont des raisons, des raisons qui nous poussent à entrer dans une relation en étant motiver par les mauvaises raisons.
+            <p>1. La pression de l'âge</p>
+            <p>Plusieurs sont ces jeunes qui se disent : "J'ai 21 ans... 26 ans... 27 ans..." Du coup, ils sont pressés de prendre les premiers venus, surtout plus l'âge avance.</p>
+            <p>La pression de l'âge pousse à prendre n'importe qui parce qu'il y a cette peur critique derrière. Faites attention : en courant derrière l'âge "idéal", vous risquez de perdre vous perdre. Le choix d’être en relation avec une personne est déterminé par le degré de maturité que nous avons et non pas un chiffre qui ne s’arrêtera jamais d’avancer jusqu’à la mort. J’ai vu dans ma vie des jeunes qui n’avaient pas 20 ans être plus matures que des $adultes de 30-40 ans. Il n’y a pas d’âge pour se marier mais à courir derrière l’âge vous risquez d’accepter celui qui est disponible sans même qu’il ne soit la bonne personne pour vous.</p>
+            <p>2. La pression sociale</p>
+            <p>"Tous mes amis sont en relation, c'est moi le seul célibataire." Vous commencez à vous frustrer et vous dites : "Je dois me conformer à ça et je suis prêt à prendre n'importe qui."</p>
+            <p>Ce n'est pas parce que tout le monde est dans quelque chose que c'est fondamentalement bon. Ce n'est pas parce que tout le monde fait quelque chose que c'est profitable pour vous, ni que c'est votre moment.</p>
+            <p>Ne choisissez pas au nom de la pression sociale. Parce que vous pouvez prendre n'importe qui, et lorsque vous souffrirez, aucune de ces personnes qui vous pointaient du doigt ne va venir vous aider. Toutes ces personnes diront : "C'est de ta faute. C'était ton choix."</p>
+            <p>3. L’argent</p>
+            <p>Il y a beaucoup des malheureux (ses), pardonnez-moi pour le terme, qui espèrent sortir un jour de leur malheur en entrant en relation avec quelqu’un qui a des moyens financiers conséquents. C’est une situation de plus en plus rependu dans notre génération. Quel en est le bilan ? Des infidélités, du mépris, des divorces. Il n’y a qu’un seul moyen de gagner de l’argent selon la Bible et c’est le travail. Pensez à cette personne que vous dite aimer et qu’en réalité c’est juste l’intérêt qu’elle représente pour vous qui vous pousse vers elle.</p> 
+            <p>Si la situation était inversée seriez-vous prêt à accepter quelqu’un dans votre vie qui ne veut pas vous estimer pour la personne que vous êtes et n’est intéressé que par l’argent que vous avez ?</p>
+            
+            <h3>La vraie question à se poser</h3>
+            <p>Lorsque vous devez choisir la personne avec qui vous allez avancer, si vous ne voulez pas vous perdre, posez-vous d'abord cette question : "Pourquoi dois-je choisir de passer ma vie entière avec cette personne ?"</p>
+            <p>Cette question va vous permettre d'intégrer l'un des aspects les plus importants de votre vie : Dieu.</p>
+            <p>Si vous devez passer votre vie entière avec cette personne qui ne prie pas, vous aurez là votre réponse. Si vous devez passer votre vie entière avec cette personne qui, à chaque fois que vous parlez de l'église, vous regarde comme si vous étiez d'un autre siècle, vous aurez votre réponse.</p>
+        
+            <h3>Le véritable test d'une relation saine</h3>
+            <p>Nos conversations doivent-elles nous amener plus proche du Seigneur ou plus loin du Seigneur ?</p>
+            <p>•	Nos discussions nous rapprochent-elles de Dieu ?</p>
+            <p>•	Nos appels vidéo nous amènent-ils près du Seigneur ?</p>
+            <p>•	Quand vous finissez vos échanges, vous sentez-vous édifiés spirituellement ?</p>
+            <p><strong>C'est ça l'équilibre !</strong></p>
+
+            <h3>Le fondement inébranlable</h3>
+            <p>Le Psaume 127:1 nous dit : "Si l'Éternel ne bâtit pas la maison, ceux qui la bâtissent travaillent en vain."</p>
+            <p>Si l'Éternel n'est pas celui qui est en train de créer le lien entre vous et cette personne, même si vous le faites, c'est en vain que vous le faites.</p>
+            <p>Vous devez chercher à accorder cette place à Dieu pour qu'il puisse être celui qui vous bâtit. C'est ainsi que vous allez aimer sans vous perdre, parce que c'est le Seigneur en qui vous vous confiez.</p>
+            <p>Lorsque l'Éternel bâtit, vous n'allez jamais vous perdre parce que l'Éternel est celui qui donne la force de supporter les imperfections de l'autre, celui qui donne cette capacité de pardonner et de persévérer jusqu'au mariage et au-delà.</p>
+
+            <h3>Conclusion</h3>
+            <p>Aimer sans se perdre, c'est possible quand :
+            <p>•	Vous refusez les motivations superficielles (argent, sexe, pression sociale)
+            <p>•	Vous choisissez quelqu'un qui vous rapproche de Dieu
+            <p>•	Vous fondez votre relation sur la parole de Dieu
+            <p>•	Vous permettez à Dieu d'être l'architecte de votre union
+        
+            <p><strong>L'amour véritable ne vous diminue pas, il vous révèle. Il ne vous éloigne pas de votre destinée, il vous y conduit main dans la main avec la personne que Dieu a préparée pour vous.</strong>/p>
+            <p>Que Dieu vous bénisse abondamment dans cette quête d'un amour authentique et édifiant !</p>
+            <p><strong>Jospin Barthon Mutula</strong></p>
+            <p>Auteur-écrivain</p>
+            <p>Contact : mutulamudekere@gmail.com</p>
+	        <p>+243 975258617</p>
+<p><strong>Qu'est-ce qui reste de votre relation si on retire l'argent et le sexe ?</strong> Cette question révèle la vraie nature de votre amour.</p>
+            
+            <h3>L'amour selon Dieu : Une liberté</h3>
+            <p>L'amour parfait bannit la peur (1 Jean 4:18). Si vous aimez vraiment, cet amour vous fera avancer et non reculer.</p>
+            
+            <h3>Les pièges qui nous font perdre</h3>
+            <p><strong>1. La pression de l'âge :</strong> Le choix d'être en relation est déterminé par la maturité, pas par un chiffre.</p>
+            <p><strong>2. La pression sociale :</strong> Ce n'est pas parce que tout le monde fait quelque chose que c'est bon pour vous.</p>
+            <p><strong>3. L'argent :</strong> Le seul moyen biblique de gagner de l'argent est le travail.</p>
+            
+            <h3>Le test d'une relation saine</h3>
+            <p>Vos conversations vous rapprochent-elles de Dieu ? Vous sentez-vous édifiés spirituellement après vos échanges ?</p>
+            
+            <h3>Le fondement inébranlable</h3>
+            <p>Psaume 127:1 : "Si l'Éternel ne bâtit pas la maison, ceux qui la bâtissent travaillent en vain."</p>
+        `
+    },
+    article3: {
+        title: "Une sanctification authentique",
+        date: "Novembre 2024",
+        content: `
+            <h3>Article à paraître</h3>
+            <p>Cet article sera bientôt disponible. Il explorera le concept de la sanctification en profondeur au-delà des idées reçues.</p>
+        `
+    }
+};
+
+function openArticle(articleId) {
+    const article = articles[articleId];
+    if (article) {
+        document.getElementById('articleTitle').textContent = article.title;
+        document.getElementById('articleMeta').textContent = article.date;
+        document.getElementById('articleBody').innerHTML = article.content;
+        document.getElementById('articleModal').classList.add('active');
+    }
+}
+
+function closeArticle() {
+    document.getElementById('articleModal').classList.remove('active');
+}
+
+function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
+}
+</script>    const articles = { ... };
+    function openArticle(articleId) { ... }
+    function closeArticle() { ... }
+    </script>
+</body>  
+</html>  
