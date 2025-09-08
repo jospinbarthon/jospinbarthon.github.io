@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aimer sans se perdre - Jospin MUTULA Barthon</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        :root {
+            --primary-color: #2c5530;
+            --secondary-color: #d4af37;
+            --accent-color: #8b4513;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --bg-light: #f8f8f8;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: var(--secondary-color);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--primary-color);
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+        }
+
+        .hero {
+            margin-top: 70px;
+            background: linear-gradient(135deg, rgba(44,85,48,0.9) 0%, rgba(139,69,19,0.9) 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+            color: var(--secondary-color);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease 0.2s;
+            animation-fill-mode: both;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 15px 40px;
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(212,175,55,0.3);
+        }
+
+        .article-hero-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            overflow: hidden;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .article-hero-image::after {
+            content: "📖";
+            font-size: 5rem;
+            opacity: 0.3;
+        }
+
+        article {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        article h3 {
+            color: var(--primary-color);
+            margin: 2.5rem 0 1.2rem;
+            font-size: 1.6rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        article p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        article strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .bullet-list {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .bullet-list p {
+            margin-bottom: 0.8rem;
+            position: relative;
+        }
+
+        .blog-section {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+            padding: 2rem;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .blog-date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .blog-excerpt {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .author-info {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .author-info h3 {
+            border: none;
+            margin-bottom: 1rem;
+        }
+
+        .author-info p {
+            margin: 0.5rem 0;
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+    <header>
+         <nav class="container">
+            <a href="#" class="logo">Bienvenu</a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#videos">Vidéos</a></li>
+                <li><a href="#livres">Mes Livres</a></li>
+                <li><a href="#blog">Articles</a></li>
+                <li><a href="#apropos">À Propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>AIMER SANS SE PERDRE</h1>
+            <p class="subtitle">L'amour qui élève plutôt que de détruire</p>
+            <p style="color: var(--secondary-color);">Avril 2025</p>
+        </div>
+    </section>
+
+    <section style="padding: 60px 0;">
+        <div class="article-hero-image">
+            <img src="deux-coeurs.jpg" alt="Aimer sans se perdre" onerror="this.style.display='none'">
+        </div>
+        
+        <article>
+            <h3>Une question qui dérange</h3>
+            <p>J’ai une question qui va peut-être challenger certaines personnes, surtout ceux qui sont déjà en relation : <strong>Qu'est-ce qui peut rester de votre relation si on retire deux choses ?</strong></p>
+            <p>Premièrement, si on retire l'argent. Deuxièmement, si on retire le sexe.</p>
+            <p>Qu'est-ce qui reste de votre relation amoureuse ? Qu'est-ce que vous devenez si on retire ces deux choses ?</p>
+            <p>Cette question peut paraître brutale, mais elle est essentielle. Parce que malheureusement, ce sont les deux caractéristiques les plus courantes des relations amoureuses aujourd'hui, surtout avec la culture que le monde nous impose.</p>
+            <p>Il est difficile de demander à une fille qui est en relation : "Qu'est-ce que tu as de plus à offrir à part ton corps ?" Et il est tout aussi difficile de demander à un homme : "Qu'est-ce que tu as de plus à offrir à part ton argent ?"</p>
+            <p>Si ce sont ces deux choses qui caractérisent votre relation, laissez-moi vous dire une chose : ce n'est pas une relation. Vous êtes dans une sorte de transaction. Cette transaction n'est pas loin d'une relation de concubinage, pire encore, d'une relation de prostitution.</p>
+
+            <h3>L'amour selon Dieu : Une liberté, pas une prison</h3>
+            <p>Quand la Bible nous parle d'amour, elle présente un amour qui exclut la crainte. L'amour parfait bannit la peur (1 Jean 4:18). Si vous aimez vraiment, cet amour parfait vous fera aller de l'avant et non reculer.</p>
+            <p>Par rapport à la Bible, l'amour n'est pas une mauvaise chose. C'est plutôt la manière dont le monde l'utilise qui transforme cet amour en objet de blessures et de déceptions.</p>
+            <p><strong>La Parole de Dieu présente l'amour comme un moyen de guérison, un moyen d'avancement auprès du Seigneur.</strong></p>
+
+            <h3>Les pièges qui nous font perdre en amour</h3>
+            <p>Les relations amoureuses sont comme un couteau, il peut vous servir pour bien tailler vos aliments ou peut se retourner contre vous et vous blesser. Plusieurs ont subi le deuxième effet, l’amour les a plus détruits, ils y ont plus perdu que gagner et parfois c’est à cause de certains pièges qui se placent devant nous. Ces pièges sont des raisons, des raisons qui nous poussent à entrer dans une relation en étant motiver par les mauvaises raisons.
+            <p>1. La pression de l'âge</p>
+            <p>Plusieurs sont ces jeunes qui se disent : "J'ai 21 ans... 26 ans... 27 ans..." Du coup, ils sont pressés de prendre les premiers venus, surtout plus l'âge avance.</p>
+            <p>La pression de l'âge pousse à prendre n'importe qui parce qu'il y a cette peur critique derrière. Faites attention : en courant derrière l'âge "idéal", vous risquez de perdre vous perdre. Le choix d’être en relation avec une personne est déterminé par le degré de maturité que nous avons et non pas un chiffre qui ne s’arrêtera jamais d’avancer jusqu’à la mort. J’ai vu dans ma vie des jeunes qui n’avaient pas 20 ans être plus matures que des $adultes de 30-40 ans. Il n’y a pas d’âge pour se marier mais à courir derrière l’âge vous risquez d’accepter celui qui est disponible sans même qu’il ne soit la bonne personne pour vous.</p>
+            <p>2. La pression sociale</p>
+            <p>"Tous mes amis sont en relation, c'est moi le seul célibataire." Vous commencez à vous frustrer et vous dites : "Je dois me conformer à ça et je suis prêt à prendre n'importe qui."</p>
+            <p>Ce n'est pas parce que tout le monde est dans quelque chose que c'est fondamentalement bon. Ce n'est pas parce que tout le monde fait quelque chose que c'est profitable pour vous, ni que c'est votre moment.</p>
+            <p>Ne choisissez pas au nom de la pression sociale. Parce que vous pouvez prendre n'importe qui, et lorsque vous souffrirez, aucune de ces personnes qui vous pointaient du doigt ne va venir vous aider. Toutes ces personnes diront : "C'est de ta faute. C'était ton choix."</p>
+            <p>3. L’argent</p>
+            <p>Il y a beaucoup des malheureux (ses), pardonnez-moi pour le terme, qui espèrent sortir un jour de leur malheur en entrant en relation avec quelqu’un qui a des moyens financiers conséquents. C’est une situation de plus en plus rependu dans notre génération. Quel en est le bilan ? Des infidélités, du mépris, des divorces. Il n’y a qu’un seul moyen de gagner de l’argent selon la Bible et c’est le travail. Pensez à cette personne que vous dite aimer et qu’en réalité c’est juste l’intérêt qu’elle représente pour vous qui vous pousse vers elle.</p> 
+            <p>Si la situation était inversée seriez-vous prêt à accepter quelqu’un dans votre vie qui ne veut pas vous estimer pour la personne que vous êtes et n’est intéressé que par l’argent que vous avez ?</p>
+            
+            <h3>La vraie question à se poser</h3>
+            <p>Lorsque vous devez choisir la personne avec qui vous allez avancer, si vous ne voulez pas vous perdre, posez-vous d'abord cette question : "Pourquoi dois-je choisir de passer ma vie entière avec cette personne ?"</p>
+            <p>Cette question va vous permettre d'intégrer l'un des aspects les plus importants de votre vie : Dieu.</p>
+            <p>Si vous devez passer votre vie entière avec cette personne qui ne prie pas, vous aurez là votre réponse. Si vous devez passer votre vie entière avec cette personne qui, à chaque fois que vous parlez de l'église, vous regarde comme si vous étiez d'un autre siècle, vous aurez votre réponse.</p>
+        
+            <h3>Le véritable test d'une relation saine</h3>
+            <p>Nos conversations doivent-elles nous amener plus proche du Seigneur ou plus loin du Seigneur ?</p>
+            <p>•	Nos discussions nous rapprochent-elles de Dieu ?</p>
+            <p>•	Nos appels vidéo nous amènent-ils près du Seigneur ?</p>
+            <p>•	Quand vous finissez vos échanges, vous sentez-vous édifiés spirituellement ?</p>
+            <p><strong>C'est ça l'équilibre !</strong></p>
+
+            <h3>Le fondement inébranlable</h3>
+            <p>Le Psaume 127:1 nous dit : "Si l'Éternel ne bâtit pas la maison, ceux qui la bâtissent travaillent en vain."</p>
+            <p>Si l'Éternel n'est pas celui qui est en train de créer le lien entre vous et cette personne, même si vous le faites, c'est en vain que vous le faites.</p>
+            <p>Vous devez chercher à accorder cette place à Dieu pour qu'il puisse être celui qui vous bâtit. C'est ainsi que vous allez aimer sans vous perdre, parce que c'est le Seigneur en qui vous vous confiez.</p>
+            <p>Lorsque l'Éternel bâtit, vous n'allez jamais vous perdre parce que l'Éternel est celui qui donne la force de supporter les imperfections de l'autre, celui qui donne cette capacité de pardonner et de persévérer jusqu'au mariage et au-delà.</p>
+
+            <h3>Conclusion</h3>
+            <div class="bullet-list">
+                <p>Aimer sans se perdre, c'est possible quand :
+                <p>•	Vous refusez les motivations superficielles (argent, sexe, pression sociale)
+                <p>•	Vous choisissez quelqu'un qui vous rapproche de Dieu
+                <p>•	Vous fondez votre relation sur la parole de Dieu
+                <p>•	Vous permettez à Dieu d'être l'architecte de votre union
+            </div>
+            <p><strong>L'amour véritable ne vous diminue pas, il vous révèle. Il ne vous éloigne pas de votre destinée, il vous y conduit main dans la main avec la personne que Dieu a préparée pour vous.</strong>/p>
+            <p>Que Dieu vous bénisse abondamment dans cette quête d'un amour authentique et édifiant !</p>
+            
+            <div class="author-info">
+                <h3>Jospin Mutula Barthon</h3>
+                <p>Auteur - Écrivain</p>
+                <p>Contact : +234 975258617</p>
+                <p>mutulamudekere@gmail.com</p>
+            </div>
+            
+            <div style="margin-top: 3rem; text-align: center;">
+                <a href="#blog" class="btn-primary">Retour aux articles</a>
+            </div>
+        </article>
+    </section>
+
+    <section class="blog-section">
+        <div class="container">
+            <h2 class="section-title">Autres Articles</h2>
+            <div class="blog-grid">
+                <div class="blog-card" onclick="alert('Article 2 : Aimer sans se perdre')">
+                    <p class="blog-date">L'amour et ses substituts</p>
+                    <h3 class="blog-title">Distinguer le vrai du faux</h3>
+                    <p class="blog-excerpt">Sortir de l'illusion en découvrant les 3 substituts d'amour</p>
+                </div>
+                <div class="blog-card" onclick="alert('Article 3 : Une sanctification authentique')">
+                    <p class="blog-date">Juillet 2025</p>
+                    <h3 class="blog-title">Une sanctification authentique</h3>
+                    <p class="blog-excerpt">Redécouvrir le message de la sanctification au-delà des idées reçues.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Jospin MUTULA Barthon. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
